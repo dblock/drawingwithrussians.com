@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>drawingwithrussians.com</title>
-    <style type="text/css">
-      html, body {
-        height: 100%;
-        width: 100%;
-        background-color: white;
-      }
-      .img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 128px;
-        height: 128px;
-        margin-top: -64px; /* Half the height */
-        margin-left: -64px; /* Half the width */
-      }
-      .img img {
-        max-width: 128px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="img" ba>
+
+<head>
+  <title>drawingwithrussians.com</title>
+  <style type="text/css">
+    html,
+    body {
+      background-color: white;
+    }
+
+    .info {
+      min-width: 500px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      color: '#850505';
+      font-family: courier;
+      font-size: small;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="info">
+    <p>
       <a href="https://www.instagram.com/artdblockdotorg" target="_blank">
-        <img style="link" src="images/shape.jpg" alt="drawingwithrussians.com">
+        <img width="128" height="128" src="images/shape.jpg" alt="drawingwithrussians.com">
       </a>
-    </div>
-  </body>
+    </p>
+    <p>
+      <a href="subscribe.html">subscribe</a>
+    </p>    
+  </div>
+</body>
+
 </html>
