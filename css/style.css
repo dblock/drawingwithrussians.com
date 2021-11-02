@@ -1,0 +1,42 @@
+html,
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    display: block;
+}
+
+.center {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.middle {
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+.info {
+    left: 50%;
+    min-width: 800px;
+    position: absolute;
+    color: '#850505';
+    font-family: courier;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.question {
+    text-align: left;
+    font-weight: bold;
+}
+
+.answer {
+    text-align: left;
+    margin-bottom: 10px;
+}

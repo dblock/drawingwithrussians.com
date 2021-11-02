@@ -2,40 +2,114 @@
 <html>
 
 <head>
-  <title>drawingwithrussians.com</title>
-  <style type="text/css">
-    html,
-    body {
-      background-color: white;
-    }
-
-    .info {
-      min-width: 800px;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      color: '#850505';
-      font-family: courier;
-      text-align: center;
-    }
-  </style>
+    <title>Drawing with Russians, New York</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/photoswipe.css">
+    <link rel="stylesheet" href="css/default-skin.css">
 </head>
 
 <body>
-  <div class="info">
-    <p>
-      <a href="https://www.instagram.com/artdblockdotorg" target="_blank">
-        <img width="200" height="200" src="images/shape.jpg" alt="drawingwithrussians.com">
-      </a>
-    </p>
-    <p>
-      <a href="subscribe.html">subscribe</a> 
-      | <a href="faq.html">faq</a>
-      | <a href="flyers.html">flyers</a>
-    </p>    
-  </div>
+    <div class="info center">
+        <p>
+            <a href="https://www.instagram.com/artdblockdotorg" target="_blank">
+                <img width="200" height="200" src="images/shape.jpg" alt="drawingwithrussians.com">
+            </a>
+        </p>
+        <p>
+            <a href="subscribe.html">subscribe</a> | <a href="faq.html">faq</a> | <a href="#" onclick="loadInvites();">invites</a>
+        </p>
+    </div>
+
+    <!-- https://photoswipe.com/ -->
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Background of PhotoSwipe. 
+       It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+            <!-- Container that holds slides. 
+          PhotoSwipe keeps only 3 of them in the DOM to save memory.
+          Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+              </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+              </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.min.js"></script>
+    <script src="js/p5.js"></script>
+    <script src="js/p5.js-svg@1.0.7.js"></script>
+
+    <script>
+        function loadInvites() {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            var images = [
+                "images/invites/2021-11-04-drawing-with-russians-8.jpg",
+                "images/invites/2021-07-29-drawing-with-russians-7.jpg",
+                "images/invites/2021-07-29-drawing-with-russians-6.jpg",
+                "images/invites/2021-06-23-drawing-with-russians-5.jpg",
+                "images/invites/2021-06-03-drawing-with-russians-4.jpg",
+                "images/invites/2021-05-06-drawing-with-russians-3.jpg",
+                "images/invites/2021-03-25-drawing with-russians-2.jpg",
+                "images/invites/2020-18-19-drawing-with-russians-1.jpg"
+            ].map(function(img) {
+                return {
+                    src: img,
+                    w: 600,
+                    h: 600
+                }
+            })
+
+            var options = {
+                index: 0,
+                shareEl: false,
+                closeOnScroll: false,
+                pinchToClose: false,
+                closeOnVerticalDrag: false
+            };
+
+            // Initializes and opens PhotoSwipe
+            var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, images, options);
+            gallery.init();
+        }
+    </script>
+
 </body>
 
 </html>
