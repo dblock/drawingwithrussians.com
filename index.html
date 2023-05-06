@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/default-skin.css">
 </head>
 
-<body>
+<body onload="updateThursday();">
     <div class="info center" style="min-width: 400px;">
         <p>
             <a href="https://www.instagram.com/artdblockdotorg" target="_blank">
@@ -26,7 +26,7 @@
             <a href="books.html" alt="Books">&#128218;</a>
         </p>
         <p>
-            <small>next drawing is Thursday, May 4, 2023</small>
+            <small><span id='next'>next drawing is first Thursday of the next month</span></small>
         </p>
     </div>
 
@@ -81,6 +81,7 @@
 
     <script src="js/photoswipe.min.js"></script>
     <script src="js/photoswipe-ui-default.min.js"></script>
+    <script src="js/thursday.js" defer></script>
 
     <script>
         function loadInvites() {
