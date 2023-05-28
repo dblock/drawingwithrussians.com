@@ -50,7 +50,7 @@
                     </div>
                     <div class="mc-field-group mc-hide-on-success">
                         <label for="mce-IG">Instagram
-                            <br><font size="-2">If you have one, please.</font>
+                            <br><font size="-2">If you have one, please. Don't include instagram.com.</font>
                         </label>
                         <input type="text" value="" name="IG" class="" id="mce-IG">
                     </div>
@@ -80,8 +80,11 @@
                 fnames[3] = 'IG';
                 ftypes[3] = 'text';
 
-                $(".button").on("click", function() {
-                    if ($('#mce-success-response:visible')) {
+                var submitted = false;
+                $('#mc-embedded-subscribe-form').on('submit reset', function(event) {
+                    if ("submit" === event.type) {
+                        submitted = true;
+                    } else if ("reset" === event.type && submitted) {
                         $('.mc-hide-on-success').hide();
                         $('#mc-embedded-subscribe').hide();
                         $('#mce-responses').css('width', '100%').css('text-align', 'center');

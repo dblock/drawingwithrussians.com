@@ -49,3 +49,7 @@ canvas {
 .book {
     margin-bottom: 10px;
 }
+
+#mc_embed_signup .button {
+    background-color: black !important;
+}
