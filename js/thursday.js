@@ -15,11 +15,12 @@ function getThursday() {
 };
 
 function getFormattedDate(date) {
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    return months[date.getMonth()] + ' ' + date.getDate().toString();
+    return days[date.getDay()] + ', ' + months[date.getMonth()] + ' ' + date.getDate().toString();
 }
 
 const updateThursday = () => {
-    var nextDrawing = getThursday();
-    document.getElementById("next").innerHTML = "next drawing is Thursday, " + getFormattedDate(getThursday());
+    // var nextDrawing = getThursday();
+    // document.getElementById("next").innerHTML = "next drawing is " + getFormattedDate(nextDrawing);
 }
