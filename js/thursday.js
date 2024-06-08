@@ -21,6 +21,6 @@ function getFormattedDate(date) {
 }
 
 const updateThursday = () => {
-    var nextDrawing = getThursday();
+    var nextDrawing = new Date('2024-08-01T17:00:00+0500'); // getThursday();
     document.getElementById("next").innerHTML = "next drawing is " + getFormattedDate(nextDrawing);
 }
