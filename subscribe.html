@@ -92,7 +92,6 @@
                 var submitted = false;
                 $('#mc-embedded-subscribe-form').on('submit reset', function(event) {
                     if ("submit" === event.type) {
-                        $('.mc-hide-on-success').hide();
                         $('#mce-responses').css('width', '100%').css('text-align', 'center').show();
                         $('#mce-progress-response').fadeIn();
                         submitted = true;
