@@ -65,6 +65,7 @@
                     <div id="mce-responses" class="clear">
                         <div class="response" id="mce-error-response" style="display:none"></div>
                         <div class="response" id="mce-success-response" style="display:none"></div>
+                        <div class="response mc-hide-on-success" id="mce-progress-response" style="display:none">Working ...</div>
                     </div>
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_beb507006c494a3a40266cd25_55bffa42a0" tabindex="-1" value=""></div>
@@ -91,6 +92,9 @@
                 var submitted = false;
                 $('#mc-embedded-subscribe-form').on('submit reset', function(event) {
                     if ("submit" === event.type) {
+                        $('.mc-hide-on-success').hide();
+                        $('#mce-responses').css('width', '100%').css('text-align', 'center').show();
+                        $('#mce-progress-response').fadeIn();
                         submitted = true;
                     } else if ("reset" === event.type && submitted) {
                         $('.mc-hide-on-success').hide();
