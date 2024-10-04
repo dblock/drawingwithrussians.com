@@ -53,3 +53,24 @@ canvas {
 #mc_embed_signup .button {
     background-color: black !important;
 }
+
+@media screen and (min-width:1130px) {
+    .links a:after {
+        content: " | ";
+    }
+
+    .links a:last-child:after {
+        content: '';
+    }
+}
+
+@media screen and (max-width:1130px) {
+    .links {
+        display: inline;
+    }
+
+    .links a:after {
+        content: "\a";
+        white-space: pre;
+    }
+}
