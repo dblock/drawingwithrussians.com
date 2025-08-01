@@ -26,10 +26,9 @@ canvas {
 
 .info {
     min-width: 375px;
-    max-width: 1200px;
+    max-width: 875px;
     left: 50%;
     position: absolute;
-    width: 90vw;
     color: '#850505';
     font-family: courier;
     text-align: center;
@@ -50,6 +49,30 @@ canvas {
 .film, .book, .drawing {
     margin-bottom: 10px;
 }
+
+.posing {
+    margin-left: 20px;
+
+    .break {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .pose {
+        font-weight: bold;
+    }
+
+    .description {
+        margin-bottom: 5px;
+    }
+
+    .transition {
+        font-style: italic;
+        margin-bottom: 10px;
+    }
+}
+
 
 #mc_embed_signup .button {
     background-color: black !important;
