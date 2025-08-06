@@ -24,7 +24,7 @@ canvas {
     transform: translate(-50%);
 }
 
-.info {
+.banner {
     min-width: 375px;
     left: 50%;
     position: absolute;
@@ -34,6 +34,18 @@ canvas {
     padding-top: 20px;
     padding-bottom: 20px;
     white-space: nowrap;
+}
+
+.info {
+    max-width: 875px;
+    min-width: 375px;
+    left: 50%;
+    position: absolute;
+    color: '#850505';
+    font-family: courier;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;    
 }
 
 .question {
