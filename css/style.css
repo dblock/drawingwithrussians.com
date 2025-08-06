@@ -26,7 +26,6 @@ canvas {
 
 .info {
     min-width: 375px;
-    max-width: 875px;
     left: 50%;
     position: absolute;
     color: '#850505';
@@ -34,6 +33,7 @@ canvas {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    white-space: nowrap;
 }
 
 .question {
