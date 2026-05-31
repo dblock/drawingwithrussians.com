@@ -86,6 +86,13 @@ canvas {
 }
 
 
+#next {
+    font-size: small;
+    white-space: normal;
+    display: inline-block;
+    max-width: 90vw;
+}
+
 #mc_embed_signup .button {
     background-color: black !important;
 }
